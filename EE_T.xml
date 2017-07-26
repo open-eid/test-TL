@@ -319,7 +319,7 @@
                <tsl:ServiceInformation>
                   <tsl:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</tsl:ServiceTypeIdentifier>
                   <tsl:ServiceName>
-                     <tsl:Name xml:lang="en">TEST of KLASS3 2016: test electronic seals</tsl:Name>
+                     <tsl:Name xml:lang="en">TEST of KLASS3-SK 2016: test electronic seals</tsl:Name>
                   </tsl:ServiceName>
                   <tsl:ServiceDigitalIdentity>
                      <tsl:DigitalId>
@@ -400,15 +400,15 @@
          </tsl:TSPServices>
       </tsl:TrustServiceProvider>
    </tsl:TrustServiceProviderList>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#TEST-EE"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>tStjc/RDzCJlbOFLxx/99wyVD4U4vPDnPETPKxfa64U=</DigestValue></Reference></SignedInfo><SignatureValue>EEav9OBzt0EKuRFWrQ/XEfwoOiYkXMDbak0vOJlH7FsxuNYSE50ZRfEVuAV3nrnn13cyYeyXZXWS
-WUt21LNsC4jMZgSYXfgN/FT23elO6L0NB7hnwUsbwehQJigyst1w3WXYqGVfsjDe7VsaskgksaCd
-AuZUDOd5iQ16W26fO5UQoT5p1QNKM5kEe5I6Xn/TJaBwdvcXK88BWtnfBfsxMwI+49v79hHLzo8h
-LyFVdbiZPz9hdqDk2nzMVZPGOuLRl88MG+2AYlHlZWZZrsKRCEfT7Dyp97rAXCNEIw1MLCBRQsQu
-hbXzBXePXR2O5rH6eTsoI9JYchxsDCDovnoM0fTcfXX42MUAXMDDPH6trkGTWiklZAVFk8g5Uoo0
-qM5LwTCvVmSfkwwLC/ONuApB+xkCxGlZSrzexRF9t038k3wHsJJyvYf3A/YalDvxDIZioJUYjvLn
-tBcGkm8/X+OVw+fLEd+/OthfNcsbEYY3z5TK2NnTKAOjZpNcaL5TV+XKMBeZ0iypIhZBDRRmP4xV
-5Q7uFSdUFK6OInoOWTk46sQieDNufX3Ion5cNqeMhuRRiRu9OIBsOuyLlkuqjLVXWh1cv8JgNDeS
-Nt3gqr/XPbjYPR8HQi7Zq3KyGEjojtaUeiBR8TA9AY02o6ullztsl26g9HIpWY5j23Y6TrKGJMo=</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEvDCCAqQCCQC/HGif/u6k6TANBgkqhkiG9w0BAQUFADAgMQswCQYDVQQGEwJFRTERMA8GA1UE
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#TEST-EE"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>lpJKrJu9DaTRNO3VihWdW7q6nXZDHhUwRZ7C+1vKRec=</DigestValue></Reference></SignedInfo><SignatureValue>MNHtvyL16mM2dbR+vitrCG5b0baZ5UVzXX2VI6sUGa41rRwZYznJMjHilidH3ZGzuhFUc2mC7qPY
+5gVWOEDA2JXztzXJCRyyZEtPYW1QJ3aKGt+tLDTlJ4x0mtsQB8PajKBzE68KGA1LcAJ1iUzquG/V
+2MeUxMMzuQDwiP8EWlHzGs/Mbd2tHDqiqHm14ZjkfgRUfNK6FuiJ9SBf7w2Ucvr3eyyw8yEjcg4X
+w7hgJmGcDbt2/yUi3bxGLCYWepqLWoA04U0JiiVNIomKSgrsY5WInhrmmel4FdpXjmlJDEdeTc9S
+/gPJClJls90VCpD9tXNHXkSJ4KDnBo80S3//6M46/NxMOYGybx9qJGsxfKhsyGinnwEvK7S0nESH
+nsIKlZ++ALYpvjBpbf9J3fnq6InfBBW2MAr4s++ak7oSGM6w7xhNQC3FYweeoul6EZ6bqETT0KSc
+vutQ6IePOUoe65WHGbI7ktJWjsaYz0bh6m29QV1ScxmQDl1Nj578Uu/n207hUGcX6QpIKvIpZER8
+NnX0vWihiU5kQDZPCGNwK5YzKPTNd0xOefGuYxgWuj0IaWv68XNr4R6MOPqsiDuHJt7GoeDjBTfY
+JegeIE49ksZX5gIAfdqHH7Eg/CxsMaegoHZyeHVpr3Crn+gSdCOnBLRVIKXDI0i0pwlpFtKOFNo=</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEvDCCAqQCCQC/HGif/u6k6TANBgkqhkiG9w0BAQUFADAgMQswCQYDVQQGEwJFRTERMA8GA1UE
 AxMIVGVzdCBUU0wwHhcNMTQwNjI1MDkxMDMwWhcNMTUwNjI1MDkxMDMwWjAgMQswCQYDVQQGEwJF
 RTERMA8GA1UEAxMIVGVzdCBUU0wwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDCU3Nd
 eUa4xMF78VfYPGDDGC4yd2bYboF4C2R7mfUcoaIGOZ4VCShl9ojjQY0a4/7QEI5FPDwvziydN9UF
