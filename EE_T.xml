@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><tsl:TrustServiceStatusList xmlns:tsl="http://uri.etsi.org/02231/v2#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ecc="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:tslx="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Id="TEST-EE" TSLTag="http://uri.etsi.org/02231/TSLTag">
    <tsl:SchemeInformation>
-      <tsl:TSLVersionIdentifier>4</tsl:TSLVersionIdentifier>
-      <tsl:TSLSequenceNumber>4</tsl:TSLSequenceNumber>
+      <tsl:TSLVersionIdentifier>5</tsl:TSLVersionIdentifier>
+      <tsl:TSLSequenceNumber>5</tsl:TSLSequenceNumber>
       <tsl:TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</tsl:TSLType>
       <tsl:SchemeOperatorName>
          <tsl:Name xml:lang="en">SK Test Authority</tsl:Name>
@@ -121,7 +121,7 @@
                         <tsl:X509SubjectName>1.2.840.113549.1.9.1=#1609706b6940736b2e6565,CN=TEST of ESTEID-SK 2011,O=AS Sertifitseerimiskeskus,C=EE</tsl:X509SubjectName>
                      </tsl:DigitalId>
                   </tsl:ServiceDigitalIdentity>
-                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</tsl:ServiceStatus>
+                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
                   <tsl:StatusStartingTime>2011-03-08T22:00:00Z</tsl:StatusStartingTime>
                   <tsl:TSPServiceDefinitionURI>
                      <tsl:URI xml:lang="en">http://sk.ee/en/repository/CP/</tsl:URI>
@@ -172,8 +172,59 @@
                         <tsl:X509SubjectName>CN=TEST of ESTEID-SK 2015,2.5.4.97=#0c0e4e545245452d3130373437303133,O=AS Sertifitseerimiskeskus,C=EE</tsl:X509SubjectName>
                      </tsl:DigitalId>
                   </tsl:ServiceDigitalIdentity>
-                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</tsl:ServiceStatus>
+                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
                   <tsl:StatusStartingTime>2015-12-18T07:13:44Z</tsl:StatusStartingTime>
+                  <tsl:TSPServiceDefinitionURI>
+                     <tsl:URI xml:lang="en">http://sk.ee/en/repository/CP/</tsl:URI>
+                  </tsl:TSPServiceDefinitionURI>
+                  <tsl:ServiceInformationExtensions>
+                     <tsl:Extension Critical="true">
+                        <ecc:Qualifications>
+                           <ecc:QualificationElement>
+                              <ecc:Qualifiers>
+                                 <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                              </ecc:Qualifiers>
+                              <ecc:CriteriaList assert="atLeastOne">
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="digitalSignature">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:Description> This service issues qualified certificates for e-signing and e-authentication within the same process. The Relying Party shall make distinction by inspection of keyUsage field contents - e-signature certificates have nonRepudation bit set exclusively. Any certificate issued under the CA/QC Sdi certificate and is issued as a QC (i.e. containing a QcCompliance statement) and that has either its nR or its dS bit set is to be considered as supported by an SSCD</ecc:Description>
+                              </ecc:CriteriaList>
+                           </ecc:QualificationElement>
+                           <ecc:QualificationElement>
+                              <ecc:Qualifiers>
+                                 <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                              </ecc:Qualifiers>
+                              <ecc:CriteriaList assert="all">
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                              </ecc:CriteriaList>
+                           </ecc:QualificationElement>
+                        </ecc:Qualifications>
+                     </tsl:Extension>
+                  </tsl:ServiceInformationExtensions>
+               </tsl:ServiceInformation>
+            </tsl:TSPService>
+            <tsl:TSPService>
+               <tsl:ServiceInformation>
+                  <tsl:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</tsl:ServiceTypeIdentifier>
+                  <tsl:ServiceName>
+                     <tsl:Name xml:lang="en">TEST of ESTEID2018: Test certificates for Estonian ID-card, the residence permit card, digital personal identification document</tsl:Name>
+                  </tsl:ServiceName>
+                  <tsl:ServiceDigitalIdentity>
+                     <tsl:DigitalId>
+                        <tsl:X509Certificate>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</tsl:X509Certificate>
+                     </tsl:DigitalId>
+                     <tsl:DigitalId>
+                        <tsl:X509SubjectName>CN=TEST of ESTEID2018,2.5.4.97=#0c0e4e545245452d3130373437303133,O=SK ID Solutions AS,C=EE</tsl:X509SubjectName>
+                     </tsl:DigitalId>
+                  </tsl:ServiceDigitalIdentity>
+                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
+                  <tsl:StatusStartingTime>2018-04-05T09:45:21Z</tsl:StatusStartingTime>
                   <tsl:TSPServiceDefinitionURI>
                      <tsl:URI xml:lang="en">http://sk.ee/en/repository/CP/</tsl:URI>
                   </tsl:TSPServiceDefinitionURI>
@@ -223,7 +274,7 @@
                         <tsl:X509SubjectName>1.2.840.113549.1.9.1=#1609706b6940736b2e6565,CN=TEST of SK OCSP RESPONDER 2011,OU=OCSP,O=AS Sertifitseerimiskeskus,C=EE</tsl:X509SubjectName>
                      </tsl:DigitalId>
                   </tsl:ServiceDigitalIdentity>
-                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</tsl:ServiceStatus>
+                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
                   <tsl:StatusStartingTime>2011-03-08T22:00:00Z</tsl:StatusStartingTime>
                   <tsl:ServiceSupplyPoints>
                      <tsl:ServiceSupplyPoint>http://demo.sk.ee/ocsp</tsl:ServiceSupplyPoint>
@@ -247,7 +298,7 @@
                         <tsl:X509SubjectName>CN=DEMO of SK TSA,OU=TSA,O=AS Sertifitseerimiskeskus,C=EE</tsl:X509SubjectName>
                      </tsl:DigitalId>
                   </tsl:ServiceDigitalIdentity>
-                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</tsl:ServiceStatus>
+                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
                   <tsl:StatusStartingTime>2014-05-31T21:00:00Z</tsl:StatusStartingTime>
                   <tsl:ServiceSupplyPoints>
                      <tsl:ServiceSupplyPoint>http://demo.sk.ee/tsa/</tsl:ServiceSupplyPoint>
@@ -268,7 +319,7 @@
                         <tsl:X509SubjectName>CN=TEST of KLASS3-SK 2010,OU=Sertifitseerimisteenused,O=AS Sertifitseerimiskeskus,C=EE</tsl:X509SubjectName>
                      </tsl:DigitalId>
                   </tsl:ServiceDigitalIdentity>
-                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</tsl:ServiceStatus>
+                  <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
                   <tsl:StatusStartingTime>2010-03-31T09:17:00Z</tsl:StatusStartingTime>
                   <tsl:TSPServiceDefinitionURI>
                      <tsl:URI xml:lang="en">https://sk.ee/en/repository/CP/</tsl:URI>
@@ -327,7 +378,7 @@
                      </tsl:DigitalId>
                   </tsl:ServiceDigitalIdentity>
                   <tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</tsl:ServiceStatus>
-                  <tsl:StatusStartingTime>2017-05-30T06:00:00Z</tsl:StatusStartingTime>
+                  <tsl:StatusStartingTime>2017-06-03T06:00:00Z</tsl:StatusStartingTime>
                   <tsl:TSPServiceDefinitionURI>
                      <tsl:URI xml:lang="en">https://sk.ee/en/repository/CP/</tsl:URI>
                      <tsl:URI xml:lang="et">https://sk.ee/repositoorium/CP/</tsl:URI>
@@ -335,63 +386,63 @@
                   <tsl:ServiceInformationExtensions>
                      <tsl:Extension Critical="true">
                         <ecc:Qualifications>
-                            <ecc:QualificationElement>
-                                <ecc:Qualifiers>
-                                    <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
-                                </ecc:Qualifiers>
-                                <ecc:CriteriaList assert="all">
-                                    <ecc:KeyUsage>
-                                        <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
-                                    </ecc:KeyUsage>
-                                    <ecc:PolicySet>
-                                        <ecc:PolicyIdentifier>
-                                           <xades:Identifier>0.4.0.194112.1.3</xades:Identifier>
-                                        </ecc:PolicyIdentifier>
-                                    </ecc:PolicySet>
-                                    <ecc:Description>Any certificate that is issued under the CA/QC Sdi certificate and that is issued as a QC (i.e. containing a QcCompliance statement) and having its Certificate Policy PolicyIdentifier OID set as 0.4.0.194112.1.3, is to be considered as supported by a QSCD. They are issued for digital stamping according to eIDAS regulation</ecc:Description>
-                                </ecc:CriteriaList>
-                            </ecc:QualificationElement>
-                            <ecc:QualificationElement>
-                                <ecc:Qualifiers>
-                                    <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-                                </ecc:Qualifiers>
-                                <ecc:CriteriaList assert="atLeastOne">
-                                    <ecc:KeyUsage>
-                                        <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
-                                    </ecc:KeyUsage>
-                                    <ecc:KeyUsage>
-                                        <ecc:KeyUsageBit name="nonRepudiation">false</ecc:KeyUsageBit>
-                                    </ecc:KeyUsage>
-                                    <ecc:Description>Any certificate issued under the CA/QC Sdi certificate and is issued as a QC (i.e. containing a QcCompliance statement) is to be considered as issued to a Legal Person</ecc:Description>
-                                </ecc:CriteriaList>
-                            </ecc:QualificationElement>
-                            <ecc:QualificationElement>
-                                <ecc:Qualifiers>
-                                    <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                                </ecc:Qualifiers>
-                                <ecc:CriteriaList assert="all">
-                                    <ecc:KeyUsage>
-                                        <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
-                                    </ecc:KeyUsage>
-                                    <ecc:Description>All certificates issued under this CA/QC service that have nonRepudiation bit set exclusively are issued as qualified certificates</ecc:Description>
-                                </ecc:CriteriaList>
-                            </ecc:QualificationElement>
-                            <ecc:QualificationElement>
-                                <ecc:Qualifiers>
-                                    <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-                                </ecc:Qualifiers>
-                                <ecc:CriteriaList assert="all">
-                                    <ecc:KeyUsage>
-                                        <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
-                                    </ecc:KeyUsage>
-                                    <ecc:Description/>
-                                </ecc:CriteriaList>
-                            </ecc:QualificationElement>
+                           <ecc:QualificationElement>
+                              <ecc:Qualifiers>
+                                 <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+                              </ecc:Qualifiers>
+                              <ecc:CriteriaList assert="all">
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:PolicySet>
+                                    <ecc:PolicyIdentifier>
+                                       <xades:Identifier>0.4.0.194112.1.3</xades:Identifier>
+                                    </ecc:PolicyIdentifier>
+                                 </ecc:PolicySet>
+                                 <ecc:Description>Any certificate that is issued under the CA/QC Sdi certificate and that is issued as a QC (i.e. containing a QcCompliance statement) and having its Certificate Policy PolicyIdentifier OID set as 0.4.0.194112.1.3, is to be considered as supported by a QSCD. They are issued for digital stamping according to eIDAS regulation</ecc:Description>
+                              </ecc:CriteriaList>
+                           </ecc:QualificationElement>
+                           <ecc:QualificationElement>
+                              <ecc:Qualifiers>
+                                 <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+                              </ecc:Qualifiers>
+                              <ecc:CriteriaList assert="atLeastOne">
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">false</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:Description>Any certificate issued under the CA/QC Sdi certificate and is issued as a QC (i.e. containing a QcCompliance statement) is to be considered as issued to a Legal Person</ecc:Description>
+                              </ecc:CriteriaList>
+                           </ecc:QualificationElement>
+                           <ecc:QualificationElement>
+                              <ecc:Qualifiers>
+                                 <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                              </ecc:Qualifiers>
+                              <ecc:CriteriaList assert="all">
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:Description>All certificates issued under this CA/QC service that have nonRepudiation bit set exclusively are issued as qualified certificates</ecc:Description>
+                              </ecc:CriteriaList>
+                           </ecc:QualificationElement>
+                           <ecc:QualificationElement>
+                              <ecc:Qualifiers>
+                                 <ecc:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+                              </ecc:Qualifiers>
+                              <ecc:CriteriaList assert="all">
+                                 <ecc:KeyUsage>
+                                    <ecc:KeyUsageBit name="nonRepudiation">true</ecc:KeyUsageBit>
+                                 </ecc:KeyUsage>
+                                 <ecc:Description/>
+                              </ecc:CriteriaList>
+                           </ecc:QualificationElement>
                         </ecc:Qualifications>
                      </tsl:Extension>
                      <tsl:Extension Critical="true">
                         <tsl:AdditionalServiceInformation>
-                           <tsl:URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</tsl:URI>
+                          <tsl:URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</tsl:URI>
                         </tsl:AdditionalServiceInformation>
                      </tsl:Extension>
                   </tsl:ServiceInformationExtensions>
@@ -400,15 +451,15 @@
          </tsl:TSPServices>
       </tsl:TrustServiceProvider>
    </tsl:TrustServiceProviderList>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#TEST-EE"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>7Ux4IGnHlGQtwspMBB/I0dvRPNagSoGVXfv2qcrneMM=</DigestValue></Reference></SignedInfo><SignatureValue>cL2LkS3BEJgJM+gji1Lml1HLcHur5qQ1Tm1XbcDw8A0GK+bpVBEyydy/y2FMuFSCVA9QnSqSCOFZ
-GgzGLUdNEy9RGTu6wMeGrnTC+nDKXvdinFe3r89Q7si2g845omZ0ndhAin0iOdsfX4ayaN8RxDcB
-FqHlXSPdAsO0TtwDrT2bVcz0s64NATzCfw351drIet2rI9v8WukVbw1U0N+Nsgahl2anAAY750JK
-+L+Z0Ywo/d78vv9O15V3z5auO5NgHevYgZYVAhgmoxsn1en7l7p04IIa1hakj+rMS+Wu+NhF8CEy
-PWhEcKLiaknt/Nm8AFoAbGM/I98BAbrruD4iwyErdiYWpfENcSD2eOGlkqsU2dnNZArLqdi3ca/g
-StBS6/chxmOfQdPk/371RQh/G3RlrOzMtYlE1oZpiMRy7CMd0TXenJi7ECC+XvDtKQ2IxY5ZsSzm
-VfDspylRZ46MR91FnTjhNdhtxUMqqpFsqQKTWJRz1G+hThIEDTS4KFLGFl+MyG4B6kssTXPafC97
-6LTAE0WWzHlnztuQGPFVGozo4ub1H6Ehm/sSU4+QmrLXnUOTn+1Xf2CLrJeddHZoIOOxqqqR4DoJ
-/YFxD7wVozkxGmCcOon+oxAkWNUZxCRbyIVFKhIG9joejaeJmamqu0/w9Co+fFmjVR/kSpE0xvU=</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEvDCCAqQCCQC/HGif/u6k6TANBgkqhkiG9w0BAQUFADAgMQswCQYDVQQGEwJFRTERMA8GA1UE
+<ds:Signature Id="S0"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#TEST-EE"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>fNjVBqiNE4c8wFfnJezHTjJ7dXzfkhayu3ihwivJeT4=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>Rw1OjRTdJISkJu0sHESav+OTHuIw/d31K1KG0GU4f9g=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>fwfzZ2futlElxZeroqyt0vvw9tpoPkc3+fWpHuowqRWqbd3HOpxaTOr/UFf0WEEioGhG5PNIJE6d
+2CSCciffGkEMBDfFdBmS5UEPWTkEzVaiPKnoFfgM0ZmHq7toCQ969Lm7pUiWjUNJr80ujRUirLfN
+lWedEbnKXK4y/Wp4h2lX4cdva42EOW8ONh3WqOFx7ZN3LB71tMiIzqOur/+hjtNPXeYCCnqBSij6
+/xZjKcOc5f4/oLQvJtwA+Am3fymaZfvMd5SZfcsaqmmncmWD/G16cv22Nf5giNepsz7m9npqRttq
+lhUCOdAgFNRmxFlEyCxS4ylB4B4w+/T86CMW00TYTitkF7rjglu5iCiDStH0sjPXM9Ihswzu/x0L
+KVAyBcFmat3BwR8KnbWNmCoMvHkAzIuc4/bA8+v8zWDjRZ/QPytVWOrKNZ2zQmnKwbLQwMULw9bM
+46FKMlA/4jeOwHF4aLIO7t4XwbmcY+bL/6YwO2EiwmhkagIIIBy0EVDUIcUOzD8jSHM+5OzJDgff
+OTBslB3YjjMu0ubtPt2+OLCfnPZ16xz5B8Bt/ICnuEkTpNHfuFNi5F0ymWDtRJvN3UsBLPa/6OpO
+jzY2z4R/063wpV5QzousMfzJIvJVkqkoYKdGkcMKEwrHr2m2ucSrxdBWSZuoFxy1r1+gY/Lo5ak=</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIEvDCCAqQCCQC/HGif/u6k6TANBgkqhkiG9w0BAQUFADAgMQswCQYDVQQGEwJFRTERMA8GA1UE
 AxMIVGVzdCBUU0wwHhcNMTQwNjI1MDkxMDMwWhcNMTUwNjI1MDkxMDMwWjAgMQswCQYDVQQGEwJF
 RTERMA8GA1UEAxMIVGVzdCBUU0wwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDCU3Nd
 eUa4xMF78VfYPGDDGC4yd2bYboF4C2R7mfUcoaIGOZ4VCShl9ojjQY0a4/7QEI5FPDwvziydN9UF
@@ -429,4 +480,4 @@ VG/Y7ZBMQTcoWJZ23q07tDQSXCDfgl1AhhaAxgsCnf+yfwWaxHjhygx40VzJnEiBTzAVnqDGW0ce
 zpRnP8huueen38ptKjI46JFR+CgW0ckyFpNtE5AaR0vJuJl8lSpAkXtmIC6iGxsnszV519MXZxpX
 I0QXAhZQmkw7HPvy/aWxqmX8yyy5Yh2en25631GHt5LtSc1iiGpX0/x+rAiRjDcU5AAEOB4XWF3+
 NSc7Tyl09trfisQcWp9vCEFSIAwhiErpMvmP+yK/Emh7nZwqU4ueAj3OvggqPsg0Soaixr/UQC9T
-+rIwifv1Bh2q+VXGqdLG62Ay5Q==</X509Certificate></X509Data></KeyInfo></Signature></tsl:TrustServiceStatusList>
++rIwifv1Bh2q+VXGqdLG62Ay5Q==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#S0"><xades:SignedProperties Id="SignedProperties"><xades:SignedSignatureProperties><xades:SigningTime>2018-06-20T12:00:58Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256"/><ds:DigestValue>L9opMx+XtpwkcJpXA+VC09wsWXF5ienDCae986cpzSE=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Test TSL, C=EE</ds:X509IssuerName><ds:X509SerialNumber>13770996796978275561</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></tsl:TrustServiceStatusList>
