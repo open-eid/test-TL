@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ecc="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:tslx="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Id="TEST-EE" TSLTag="http://uri.etsi.org/02231/TSLTag">
    <SchemeInformation>
       <TSLVersionIdentifier>5</TSLVersionIdentifier>
-      <TSLSequenceNumber>5</TSLSequenceNumber>
+      <TSLSequenceNumber>6</TSLSequenceNumber>
       <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
       <SchemeOperatorName>
          <Name xml:lang="en">SK Test Authority</Name>
@@ -262,6 +262,35 @@
             </TSPService>
             <TSPService>
                <ServiceInformation>
+                  <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                  <ServiceName>
+                     <Name xml:lang="en">TEST of NQ-SK 2016 advanced certificates for electronic signatures</Name>
+                  </ServiceName>
+                  <ServiceDigitalIdentity>
+                     <DigitalId>
+                        <X509Certificate>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</X509Certificate>
+                     </DigitalId>
+                     <DigitalId>
+                        <X509SubjectName>CN=TEST of NQ-SK 2016,2.5.4.97=#130e4e545245452d3130373437303133,O=AS Sertifitseerimiskeskus,C=EE</X509SubjectName>
+                     </DigitalId>
+                  </ServiceDigitalIdentity>
+                  <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                  <StatusStartingTime>2016-12-21T10:00:00Z</StatusStartingTime>
+                  <TSPServiceDefinitionURI>
+                     <URI xml:lang="et">https://sk.ee/repositoorium/CP/</URI>
+                     <URI xml:lang="en">https://sk.ee/en/repository/CP/</URI>
+                  </TSPServiceDefinitionURI>
+                  <ServiceInformationExtensions>
+                     <Extension Critical="true">
+                        <AdditionalServiceInformation>
+                           <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                        </AdditionalServiceInformation>
+                     </Extension>
+                  </ServiceInformationExtensions>
+               </ServiceInformation>
+            </TSPService>
+            <TSPService>
+               <ServiceInformation>
                   <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                   <ServiceName>
                      <Name xml:lang="en">TEST of ESTEID2018: Test certificates for Estonian ID-card, the residence permit card, digital personal identification document</Name>
@@ -502,15 +531,15 @@
          </TSPServices>
       </TrustServiceProvider>
    </TrustServiceProviderList>
-<ds:Signature Id="S0"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#TEST-EE"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>3nderFBjBdx+6FpA+TiQgG0lu+z5cVqmbmZ7XSvsS5U=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>dmCl643Ksxlrkx8+DCv6eXi0EL5WH5D4YfsNGdSHwTU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>V8SBt4/rRWAdvFZtYe5OAfL73nD+x95ImFM3fRoF6dDiBZf2TXflAcjpqBKl23B7qo1XxNoLJMY5
-NA7HYCUHckNMrtGZ4uanmu43AcY1qW9+HVziTMO18K623d9pR1ZtzmyQuXTvzjsDB3vdi84p8W6g
-1JcLQjH/4VVDKdO6/NjIu2vEs8AXbU1MbeosaX8YYb+0YDXWFZv7FXoqUPMbxyf1mjg5Rv4sNNY3
-OdDzgOIbIFJMGMP7yvvq3K7WHzhzwNlielczHVeSWNtJ4iLLYWcp+MCQ1si0aKpayVAjkZLT7OgD
-JoFcTo6O2FOeCzoCHuLh56fVu6JIc4GVUmB83Lc0mHVMMbJV482M7bMwQ/aBj82C2d9WAnpPgmzp
-pWDo6CByWm/k43sbpZG5hGq1w8UT+rQvrDIdkhKicvBTqjxTMwh/oJGj+yxxJSnk9MFR+OmDYuTQ
-cIlheYv4CreQnXkiHkMSt/X5xrz7ThWUP3wj8JXD0LTlRB2yOoade6Ordgx+1yanWP8p//beLq1Q
-I2oJ0lRjQUv2UFGO6m0yPqU8hsu9aSqOEYDE6YjcWpTLQUrwIQypT36/fy/cuVtOBT58OsMYoeKD
-xZpVIQM5Yjm6paMfM64brlgD7+7Tev3PqvK7AjZENNeyoSGxZwVeAK9LvUtE068A9XRzctc5oXk=</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIEvDCCAqQCCQC/HGif/u6k6TANBgkqhkiG9w0BAQUFADAgMQswCQYDVQQGEwJFRTERMA8GA1UE
+<ds:Signature Id="S0"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#TEST-EE"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>0YCY8ewi6BBQYCifVwm94eMgYd3ePCAvzAVHW6zIXc0=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>yoKx2G96z+sO17XDSu2ocgfTN+88z6yB8KcvLXDBUyo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>C1nyVAuUcA3+rWK6R5oGt0vrPmDgyu8uvwYdQD/HQ1712hV1qYqR+ZW4LPKfffccm344er/fbWXr
+RQe+oDAH11Fmmih8mLYOqh02X1dDFR+vQmMis5MUaldmeJul46E+Cq3jX3fwt2V0iWjXATctlxiP
+7qeF53EYN5JffhVeNcfWQAQtuvrnWuxGWIGvs0ye7TJKOA37bAcMfF76IX8WPbcuT2nfvLd8NKp3
+B37W37rkLMht1Zu0VfbBlrOEDIsQwyzzAxFC/kaWqV3HRi736GUzfGOvVaG6fGw9RXHVN+DMKd9k
+/uKeP+LDXAOaspVjh7Dej+7IM1Jxbr+WO6Yuh6jVM9+7tvk9Yo7j11YpFhFCSDssWBR61Fo2bvwq
+Fwum7tj36GH1LzUZiOfTTXcyvJuf/jDRSoyJfOMM8/ERS4V53S/JGpqvbOBAR9G82exn2WHR+ywE
+FUY5d4tsHfB7o7Z7iPF0D94y1CqJd/FmQ9GBhKl09HN0PnuhEUWEh7DKKpZEoqBeH64qFwC02RKP
++ogb2kif2+ROiLqbu8/PBX9+IOcM7wOCxPUOLxsEY2dDrAIe+qGaanD4hFttmkMCppT9KoURS2l6
+F/BsrdI0pEItBel9uMjS1cPPxaAnmXEVGAzAwXifBWP4O3L/UdZ+yhWpGyWpbcWoOedPNjoKiUQ=</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIEvDCCAqQCCQC/HGif/u6k6TANBgkqhkiG9w0BAQUFADAgMQswCQYDVQQGEwJFRTERMA8GA1UE
 AxMIVGVzdCBUU0wwHhcNMTQwNjI1MDkxMDMwWhcNMTUwNjI1MDkxMDMwWjAgMQswCQYDVQQGEwJF
 RTERMA8GA1UEAxMIVGVzdCBUU0wwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDCU3Nd
 eUa4xMF78VfYPGDDGC4yd2bYboF4C2R7mfUcoaIGOZ4VCShl9ojjQY0a4/7QEI5FPDwvziydN9UF
@@ -531,4 +560,4 @@ VG/Y7ZBMQTcoWJZ23q07tDQSXCDfgl1AhhaAxgsCnf+yfwWaxHjhygx40VzJnEiBTzAVnqDGW0ce
 zpRnP8huueen38ptKjI46JFR+CgW0ckyFpNtE5AaR0vJuJl8lSpAkXtmIC6iGxsnszV519MXZxpX
 I0QXAhZQmkw7HPvy/aWxqmX8yyy5Yh2en25631GHt5LtSc1iiGpX0/x+rAiRjDcU5AAEOB4XWF3+
 NSc7Tyl09trfisQcWp9vCEFSIAwhiErpMvmP+yK/Emh7nZwqU4ueAj3OvggqPsg0Soaixr/UQC9T
-+rIwifv1Bh2q+VXGqdLG62Ay5Q==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#S0"><xades:SignedProperties Id="SignedProperties"><xades:SignedSignatureProperties><xades:SigningTime>2018-06-28T20:24:20Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256"/><ds:DigestValue>L9opMx+XtpwkcJpXA+VC09wsWXF5ienDCae986cpzSE=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Test TSL, C=EE</ds:X509IssuerName><ds:X509SerialNumber>13770996796978275561</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
++rIwifv1Bh2q+VXGqdLG62Ay5Q==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#S0"><xades:SignedProperties Id="SignedProperties"><xades:SignedSignatureProperties><xades:SigningTime>2018-07-03T14:35:41Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256"/><ds:DigestValue>L9opMx+XtpwkcJpXA+VC09wsWXF5ienDCae986cpzSE=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Test TSL, C=EE</ds:X509IssuerName><ds:X509SerialNumber>13770996796978275561</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
